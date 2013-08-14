@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class UploadForm(models.Model):
+class UploadFormModel(models.Model):
     name = models.CharField(max_length = 250)
     email = models.EmailField(max_length = 250)
     phone = models.CharField(max_length = 250)
@@ -10,5 +10,5 @@ class UploadForm(models.Model):
     timestamp = models.DateTimeField(auto_now_add = True, auto_now = False)
     
     def __unicode__(self):
-        return self.email
+        return self.name + " | " + self.email
     
